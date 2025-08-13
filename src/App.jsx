@@ -11,10 +11,13 @@ import InputState4 from "./components/BasicState/InputState4/InputState4";
 import DomRef from "./components/DomRef/DomRef";
 import Effect1 from "./components/Effect/Effect1/Effect1";
 import Effect2 from "./components/Effect/Effect2/Effect2";
+import Emotion1 from "./components/Emotion/Emotion1/Emotion1";
+import Emotion2 from "./components/Emotion/Emotion2/Emotion2";
 import LifeCycle from "./components/LifeCycle/LifeCycle";
 import LifeCycleApp from "./components/LifeCycle/LifeCycleApp";
 import Render from "./components/LifeCycle/Render";
 import FruitsFilter from "./components/Pratics/FruitsFilter/FruitsFilter";
+import SignupForm from "./components/Pratics/SignupForm/SignupForm";
 import UserProfile from "./components/Pratics/UserProfile/UserProfile";
 
 function App() {
@@ -36,7 +39,10 @@ function App() {
       {/* <Effect1 /> */}
       {/* <Effect2 /> */}
       {/* <FruitsFilter/> */}
-      <UserProfile />
+      {/* <UserProfile /> */}
+      {/* <SignupForm /> */}
+      {/* <Emotion1 /> */}
+      <Emotion2 />
     </>
   );
 }
