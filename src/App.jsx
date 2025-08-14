@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import BasicJsx from "./components/Basicjsx/Basicjsx";
 import BasicProps from "./components/BasicProps/BasicProps";
 import BasicReact from "./components/BasicReact/BasicReact";
@@ -19,6 +19,7 @@ import Render from "./components/LifeCycle/Render";
 import FruitsFilter from "./components/Pratics/FruitsFilter/FruitsFilter";
 import SignupForm from "./components/Pratics/SignupForm/SignupForm";
 import UserProfile from "./components/Pratics/UserProfile/UserProfile";
+import Index from "./components/TodoList/pages";
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
       {/* <UserProfile /> */}
       {/* <SignupForm /> */}
       {/* <Emotion1 /> */}
-      <Emotion2 />
+      {/* <Emotion2 /> */}
+      <Index />
     </>
   );
 }
