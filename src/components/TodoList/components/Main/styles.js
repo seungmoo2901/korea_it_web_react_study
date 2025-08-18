@@ -10,7 +10,7 @@ export const listContainer = css`
   flex-grow: 1;
   border: 1px solid #dbdbdb;
   border-radius: 8px;
-  overflow-y: auto;
+  overflow: hidden;
 
   & > ul {
     list-style-type: none;
@@ -20,11 +20,11 @@ export const listContainer = css`
     overflow-y: auto;
 
     & > li {
-      box-sizing: border-box;
-      padding: 5px 15px;
-      border-bottom: 1px solid #dbdbdb;
+      position: relative;
       display: flex;
-      align-items: center;
+      box-sizing: border-box;
+      padding: 10px 15px;
+      border-bottom: 1px solid #dbdbdb;
 
       & > input[type="checkbox"] {
         display: none;
@@ -37,7 +37,7 @@ export const listContainer = css`
           border-radius: 50%;
           width: 25px;
           height: 25px;
-          border: 1px solid #ddbdbd;
+          border: 1px solid #dbdbdb;
           box-sizing: border-box;
         }
 
@@ -57,14 +57,15 @@ export const listContainer = css`
 export const todoInputContainer = css`
   margin-top: 10px;
   border: 1px solid #dbdbdb;
-  box-sizing: border-box;
   border-radius: 8px;
+  box-sizing: border-box;
   overflow: hidden;
   height: 40px;
 
   & > input {
     border: none;
     outline: none;
+    box-sizing: border-box;
     padding: 5px 15px;
     width: 100%;
     height: 100%;
@@ -80,13 +81,13 @@ export const hiddenTrashBox = css`
   overflow: hidden;
   cursor: pointer;
 
-  &:hover > idv {
+  &:hover > div {
     right: 0;
   }
 `;
 
 export const trashBox = css`
-  transition: all 0.2 ease;
+  transition: all 0.2s ease-in-out;
   position: absolute;
   top: 0;
   right: -46px;

@@ -11,7 +11,6 @@ function Main({ todoList, setTodoList }) {
   };
 
   const onKeyDownHandler = (e) => {
-    //엔터키 눌러진게 아니면 무시
     if (e.keyCode !== 13) {
       return;
     }
@@ -19,20 +18,17 @@ function Main({ todoList, setTodoList }) {
       return;
     }
 
-    // 새로운 할 일 객체 생성
-    // prev → 이전 todoList 상태
     setTodoList((prev) => {
-      // 마지막 요소의 id를 가져오거나, 목록이 비어있으면 0으로 설정
       const lastId = prev.length === 0 ? 0 : prev[prev.length - 1].id;
-      // 새로운 할 일 객체 생성
       const newTodo = {
-        id: lastId + 1, // 마지막 id보다 1 큰 값
-        isComplete: false, // 완료 여부 기본값 false
-        content: inputValue, // 입력한 값 저장
+        id: lastId + 1,
+        isComplete: false,
+        content: inputValue,
       };
-      // 기존 목록 뒤에 새 할 일을 추가하여 반환
+
       return [...prev, newTodo];
     });
+
     setInputValue("");
   };
   return (
@@ -56,7 +52,8 @@ function Main({ todoList, setTodoList }) {
       <div css={s.todoInputContainer}>
         <input
           type="text"
-          placeholder="할일을 입력하세요"
+          placeholder="할 일을 입력하세요"
+          value={inputValue}
           onChange={inputOnChangeHandler}
           onKeyDown={onKeyDownHandler}
         />
